@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Кэт энерджи - Каталог продукции</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile-header.svg" width="191" height="39" alt="Кэт энерджи">
-      </a>
-      <button class="page-header__toggle" type="button">Открыть меню</button>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Кэт энерджи">
+        </a>
+        <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -26,8 +29,8 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__title">Каталог продукции</h1>
       <section class="catalog">
+        <h1 class="catalog__title">Каталог продукции</h1>
         <article class="catalog__item product">
           <img class="product__image" src="img/catalog-1-mobile.png" width="140" height="144" alt="Cat Energy PRO 500 г">
           <h2 class="product__title">Cat Energy PRO 500 г</h2>
@@ -162,19 +165,21 @@
           <a class="product__button button" href="#">Заказать</a>
         </article>
         <article class="catalog__item product product--show-more">
-          <img class="product__plus-image" src="" alt="">
-          <h2 class="product__title product__title--show-more"></h2>
-          <p class="product__description">
+          <img class="product__plus-image" src="icon-plus-mobile.svg" alt="Показать 100500 товаров">
+          <h2 class="product__title product__title--show-more">Показать еще 100500 товаров</h2>
+          <p class="product__feature product__feature--show-more">
             На самом деле вкусов гораздо больше!
           </p>
-          <a class="product__button button button--show-more" href="#">Заказать</a>
+          <a class="product__button button button--show-more" href="#">Показать все</a>
         </article
       </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__logo">
-        <img class="page-footer__logo-image" src="img/footer-logo.svg" width="128" height="24" alt="Кэт энерджи">
+        <a href="index.html">
+          <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
+        </a>
       </div>
       <div class="page-footer__social social">
         <ul class="social__list">
