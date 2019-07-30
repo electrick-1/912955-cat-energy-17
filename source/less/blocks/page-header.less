@@ -1,19 +1,29 @@
 .page-header {
   display: flex;
   flex-wrap: wrap;
+
+  width: 320px;
+  margin: 0 auto;
+
+  outline: 2px solid rgba(255, 0, 0, 0.5);
 }
 
 .page-header__wrapper {
   display: flex;
-  padding: 0 0 0 20px;
+  width: 280px;
+  padding: 0 20px;
 
   border-bottom: 1px solid #e6e6e6;
 }
 
 .page-header__logo {
+  display: block;
+  margin: 11px 0 0 20px;
   width: 191px;
   height: 39px;
-  margin-top: 11px;
+
+  background-image: url("../img/logo-mobile.svg");
+  background-repeat: no-repeat;
 }
 
 .page-header__toggle {
@@ -24,5 +34,53 @@
 
   background-color: white;
   background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
   border: none;
+}
+
+// Планшетная версия
+
+@media (min-width: 768px) {
+  .page-header {
+    min-height: 144px;
+    width: 768px;
+  }
+
+  .page-header__wrapper {
+    width: auto;
+    padding: 0;
+
+    border: none;
+  }
+
+  .page-header__logo {
+    margin: 24px 0 0 30px;
+    width: 174px;
+    height: 59px;
+
+    background-image: url("../img/logo-tablet.svg");
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+//Десктопная версия
+
+@media (min-width: 1440px) {
+  .page-header {
+    min-height: 142px;
+    width: 1440px;
+  }
+
+  .page-header__logo {
+    width: 203px;
+    height: 60px;
+
+    margin: 53px 0 0 109px;
+
+    background-image: url("../img/logo-desktop.svg");
+    background-size: 202px 60px;
+  }
 }

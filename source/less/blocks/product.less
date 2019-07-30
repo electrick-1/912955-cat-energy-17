@@ -1,4 +1,22 @@
+.product {
+  display: flex;
+  flex-wrap: wrap;
+
+  border-top: 1px solid #d9d9d9;
+
+  &--show-more {
+    flex-direction: column;
+
+    align-items: center;
+
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
+
 .product__title {
+  width: 75px;
+  margin: 22px 0 16px;
+
   font-family: @oswald;
   font-size: 16px;
   line-height: 20px;
@@ -7,17 +25,44 @@
   text-transform: uppercase;
 
   &--show-more {
+    width: 280px;
+    margin: 23px 0 7px;
+
     text-align: center;
   }
 }
 
+.product__image {
+  width: 140px;
+  height: 144px;
+
+  &--show-more {
+    width: 30px;
+    height: 30px;
+
+    polygon {
+      fill: rgba(34, 34, 34, 0.2);
+    }
+  }
+}
+
 .product__feature {
+  width: 140px;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+
   font-family: @arial;
   font-size: 12px;
   line-height: 16px;
   color: #444444;
 
+  td {
+    padding: 0;
+  }
+
   &--show-more {
+    width: 280px;
     text-align: center;
   }
 }
@@ -27,7 +72,79 @@
 }
 
 .product__button--show-more {
+  margin-top: 20px;
+
   color: #444444;
 
   background-color: #f2f2f2;
+}
+
+@media (min-width: 768px) {
+  .product {
+    flex-direction: column;
+    padding-bottom: 40px;
+
+    align-items: center;
+
+    border-top: none;
+
+    &--show-more {
+      padding-top: 55px;
+
+      background-color: none;
+      border: 1px solid #cdcdcd;
+    }
+  }
+
+  .product__title {
+    width: 135px;
+    margin: 165px auto 28px;
+
+    font-size: 20px;
+    text-align: center;
+
+    &--show-more {
+      margin: 50px 0 28px;
+    }
+  }
+
+  .product__image {
+    position: absolute;
+    width: 140px;
+    height: 144px;
+
+    &--show-more {
+      width: 61px;
+      height: 61px;
+    }
+  }
+
+  .product__feature {
+    width: 250px;
+    margin-bottom: 33px;
+
+    font-size: 16px;
+
+    td {
+      padding: 5px 0;
+
+      border-bottom: 1px solid #d9d9d9;
+    }
+
+    &--show-more {
+      width: 170px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .product__button--show-more {
+    margin-top: 85px;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .product__feature {
+    width: 180px;
+  }
 }

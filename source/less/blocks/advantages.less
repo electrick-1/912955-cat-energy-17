@@ -1,11 +1,17 @@
 .advantages {
   display: flex;
   flex-direction: column;
+  width: 320px;
   padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  outline: 2px solid rgba(255, 255, 0, 0.5);
 }
 
 .advantages__title {
   margin: 0;
+  padding: 0;
 
   font-family: @oswald;
   font-size: 36px;
@@ -36,6 +42,7 @@
     height: 60px;
     background-color: #68b738;
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   &--leaf::before {
@@ -52,5 +59,92 @@
 
   &--clock::before {
     background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+@media (min-width: 768px) {
+  .advantages {
+    width: 768px;
+    padding: 0 30px;
+    margin-top: 20px;
+
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .advantages__title {
+    font-size: 60px;
+  }
+
+  .advantages__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .advantages__item {
+    width: 245px;
+    min-height: 230px;
+    margin: 35px 80px 55px 0;
+    padding-top: 118px;
+    box-sizing: border-box;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      top: 0;
+      left: 0;
+
+      display: block;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -30px;
+      left: 125px;
+
+      width: 120px;
+      height: 230px;
+
+      font-family: @oswald;
+      font-size: 281px;
+      line-height: 281px;
+      font-weight: 400;
+      color: #f2f2f2;
+
+      z-index: -1;
+    }
+
+    &--leaf::after {
+      content: "1";
+    }
+
+    &--powder::after {
+      content: "2";
+    }
+
+    &--dining::after {
+      content: "3";
+    }
+
+    &--clock::after {
+      content: "4";
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .advantages {
+    width: 1440px;
+    padding: 0 110px;
+    margin-top: 80px;
+  }
+
+  .advantages__item {
+    margin: 35px 0 55px;
+    padding-top: 118px;
   }
 }
