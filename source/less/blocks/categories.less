@@ -1,8 +1,6 @@
 .categories {
   display: flex;
   flex-direction: column;
-  width: 320px;
-  margin: 0 auto;
 
   outline: 2px solid rgba(0, 0, 255, 0.5);
 }
@@ -112,11 +110,7 @@
   }
 }
 
-@media (min-width: 768px) {
-  .categories {
-    width: 768px;
-  }
-
+@media (min-width: @tablet-width) {
   .categories__weight {
     margin: 0 30px 30px;
     padding: 50px;
@@ -185,13 +179,11 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: @desktop-width) {
   .categories {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1440px;
-    margin: 0 auto;
     padding: 80px 110px 0;
     box-sizing: border-box;
   }

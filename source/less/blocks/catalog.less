@@ -1,8 +1,6 @@
 .catalog {
   display: flex;
   flex-wrap: wrap;
-  width: 320px;
-  margin: 0 auto;
 
   outline: 2px solid rgba(0, 255, 0, 0.5);
 }
@@ -23,11 +21,7 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-  .catalog {
-    width: 768px;
-  }
-
+@media (min-width: @tablet-width) {
   .catalog__title {
     margin: 0 30px 20px;
     font-size: 60px;
@@ -41,9 +35,8 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: @desktop-width) {
   .catalog {
-    width: 1440px;
     justify-content: space-between;
     padding: 0 110px;
     box-sizing: border-box;

@@ -1,9 +1,6 @@
 .functional {
-  width: 320px;
   min-height: 480px;
   padding: 0 20px;
-  margin: 0 auto;
-  box-sizing: border-box;
 
   background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -42,9 +39,8 @@
 
 // Планшетная версия
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .functional {
-    width: 768px;
     min-height: 800px;
     padding: 0 120px;
 
@@ -86,9 +82,8 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: @desktop-width) {
   .functional {
-    width: 1440px;
     min-height: 700px;
     padding: 0 120px;
     margin-top: -144px;

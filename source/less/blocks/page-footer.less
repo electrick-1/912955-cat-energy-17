@@ -5,8 +5,10 @@
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: @mobile-width;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 
   outline: 2px solid rgba(0, 255, 255, 0.5);
 }
@@ -31,11 +33,12 @@
   justify-content: space-between;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .page-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
-    width: 708px;
+    width: @tablet-width;
+    padding: 0 30px;
   }
 
   .page-footer__logo {
@@ -53,8 +56,9 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: @desktop-width) {
   .page-footer__wrapper {
-    width: 1220px;
+    width: @desktop-width;
+    padding: 0 110px;
   }
 }

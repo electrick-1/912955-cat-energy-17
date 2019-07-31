@@ -1,9 +1,7 @@
 .advantages {
   display: flex;
   flex-direction: column;
-  width: 320px;
   padding: 20px;
-  margin: 0 auto;
   box-sizing: border-box;
 
   outline: 2px solid rgba(255, 255, 0, 0.5);
@@ -62,9 +60,8 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .advantages {
-    width: 768px;
     padding: 0 30px;
     margin-top: 20px;
 
@@ -136,9 +133,8 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: @desktop-width) {
   .advantages {
-    width: 1440px;
     padding: 0 110px;
     margin-top: 80px;
   }

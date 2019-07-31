@@ -1,4 +1,18 @@
 .page-main {
   display: flex;
   flex-direction: column;
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main {
+    width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    width: @desktop-width;
+  }
 }
