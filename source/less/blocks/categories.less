@@ -1,6 +1,8 @@
 .categories {
   display: flex;
   flex-direction: column;
+
+  outline: 2px solid rgba(0, 0, 255, 0.5);
 }
 
 .categories__weight {
@@ -44,6 +46,8 @@
     position: absolute;
 
     display: block;
+
+    background-repeat: no-repeat;
   }
 
   &--slim::after {
@@ -103,5 +107,122 @@
     height: 12px;
 
     background-image: url("../img/icon-right-arrow-long.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .categories__weight {
+    margin: 0 30px 30px;
+    padding: 50px;
+  }
+
+  .categories__title {
+    margin-left: 5px;
+    margin-top: 31px;
+
+    font-size: 36px;
+
+    &::before {
+      top: 42px;
+      left: 396px;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim::after {
+      top: 30px;
+      left: 425px;
+
+      width: 141px;
+      height: 194px;
+    }
+
+    &--pro::after {
+      top: 85px;
+      left: 362px;
+
+      width: 268px;
+      height: 113px;
+    }
+  }
+
+  .categories__description {
+    margin: 0;
+    padding: 20px 0 57px 2px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    border-bottom: none;
+  }
+
+  .categories__description--slim {
+    width: 380px;
+  }
+
+  .categories__description--pro {
+    width: 340px;
+  }
+
+  .categories__button {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      top: 5px;
+      left: 134px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .categories {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px 40px 0;
+    box-sizing: border-box;
+  }
+
+  .categories__weight {
+    width: 570px;
+    margin: 0;
+    padding: 50px;
+  }
+
+  .categories__title {
+    margin-left: 166px;
+
+    &::before {
+      top: -34px;
+      left: -164px;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim::after {
+      top: -40px;
+      left: -151px;
+
+      width: 71px;
+      height: 97px;
+    }
+
+    &--pro::after {
+      top: -12px;
+      left: -182px;
+
+      width: 134px;
+      height: 57px;
+    }
+  }
+
+  .categories__description {
+    width: 470px;
   }
 }

@@ -1,8 +1,8 @@
 .button {
-  display: inline-block;
+  display: block;
   width: 280px;
   min-height: 40px;
-  padding-top: 12px;
+  padding: 11px 0;
   box-sizing: border-box;
 
   font-family: @oswald;
@@ -15,4 +15,20 @@
   text-transform: uppercase;
 
   background-color: #68b738;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    width: 250px;
+    padding: 13px 0;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button {
+    width: 170px;
+  }
 }

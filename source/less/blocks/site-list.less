@@ -15,7 +15,9 @@
 .site-list__item a {
   display: block;
   width: 320px;
+  margin: 0;
   padding: 21px 0;
+  box-sizing: border-box;
 
   font-family: @oswald;
   font-size: 20px;
@@ -24,4 +26,47 @@
   color: #111111;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    margin-right: 30px;
+    margin-top: 26px;
+  }
+
+  .site-list__item {
+    border-bottom: none;
+  }
+
+  .site-list__item a {
+    width: auto;
+    margin-left: 36px;
+
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #222222;
+  }
+
+  .site-list__item:first-child a {
+    margin-left: 0;
+  }
+}
+
+// Планшетная версия
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    margin-right: 110px;
+    margin-top: 56px;
+
+    &--index a {
+      color: #ffffff;
+    }
+  }
+
+  .site-list__item a {
+    font-size: 20px;
+  }
 }
