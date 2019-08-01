@@ -5,10 +5,7 @@
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  width: @mobile-width;
-  margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box;
 
   outline: 2px solid rgba(0, 255, 255, 0.5);
 }
@@ -37,7 +34,6 @@
   .page-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
-    width: @tablet-width;
     padding: 0 30px;
   }
 
@@ -58,7 +54,6 @@
 
 @media (min-width: @desktop-width) {
   .page-footer__wrapper {
-    width: @desktop-width;
-    padding: 0 110px;
+    padding: 0 40px;
   }
 }

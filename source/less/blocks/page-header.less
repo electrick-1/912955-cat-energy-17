@@ -2,15 +2,11 @@
   display: flex;
   flex-wrap: wrap;
 
-  width: @mobile-width;
-  margin: 0 auto;
-
   outline: 2px solid rgba(255, 0, 0, 0.5);
 }
 
 .page-header__wrapper {
   display: flex;
-  width: 280px;
   padding: 0 20px;
 
   border-bottom: 1px solid #e6e6e6;
@@ -18,7 +14,7 @@
 
 .page-header__logo {
   display: block;
-  margin: 11px 0 0 20px;
+  margin: 11px 0 0;
   width: 191px;
   height: 39px;
 
@@ -30,7 +26,7 @@
   width: 25px;
   height: 19px;
   padding: 0;
-  margin: 23px 19px 23px 65px;
+  margin: 23px 0 23px 65px;
 
   background-color: white;
   background-image: url("../img/icon-mobile-menu.svg");
@@ -43,7 +39,6 @@
 @media (min-width: @tablet-width) {
   .page-header {
     min-height: 144px;
-    width: @tablet-width;
   }
 
   .page-header__wrapper {
@@ -71,14 +66,13 @@
 @media (min-width: @desktop-width) {
   .page-header {
     min-height: 142px;
-    width: @desktop-width;
   }
 
   .page-header__logo {
     width: 203px;
     height: 60px;
 
-    margin: 53px 0 0 109px;
+    margin: 53px 0 0 39px;
 
     background-image: url("../img/logo-desktop.svg");
     background-size: 202px 60px;
