@@ -5,14 +5,41 @@
   line-height: 16px;
   color: #444444;
   text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__logo {
-  width: 40px;
+  width: 33px;
   height: 40px;
-  margin: 22px 0 22px auto;
+  margin: 20px 0 20px auto;
 
   path {
     fill: #444444;
+  }
+
+  &:hover,
+  &:focus {
+    path {
+      fill: #68b738;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__text {
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__text {
+    margin-right: 17px;
   }
 }

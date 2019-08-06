@@ -20,6 +20,15 @@
 
   background-image: url("../img/logo-mobile.svg");
   background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__toggle {
@@ -38,7 +47,7 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    min-height: 144px;
+    min-height: 141px;
   }
 
   .page-header__wrapper {

@@ -4,7 +4,7 @@
 
   background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 167px, 0 0;
+  background-position: 20px 167px, 0 0;
 
   outline: 2px solid rgba(0, 255, 0, 0.5);
 }
@@ -33,7 +33,7 @@
 }
 
 .functional__button {
-  width: 245px;
+  width: 280px;
   margin-top: 302px;
 }
 
@@ -43,14 +43,15 @@
   .functional {
     min-height: 800px;
     padding: 0 120px;
+    margin-bottom: 10px;
 
     background-image: url("../img/index-can-tablet@1x.jpg");
-    background-position: 65px 197px;
+    background-position: 30px 200px;
   }
 
   .functional__title {
     margin: 0;
-    margin-bottom: 33px;
+    margin-bottom: 40px;
 
     font-size: 60px;
     line-height: 60px;
@@ -66,6 +67,7 @@
   }
 
   .functional__button {
+    width: 245px;
     min-height: 52px;
     margin-top: 48px;
     padding-top: 17px;
@@ -77,16 +79,30 @@
 
 @media (min-width: @desktop-width) {
   .functional {
-    min-height: 700px;
-    margin-top: -144px;
+    min-height: 555px;
 
-    background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg");
-    background-position: 480px 144px, 640px 0;
+    background-image: url("../img/index-can-desktop@1x.png");
+    background-position: 490px 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 50%;
+      min-height: 696px;
+
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-size: cover;
+      background-position: center;
+
+      z-index: -1;
+    }
   }
 
   .functional__title {
     width: 420px;
-    margin: 226px 0 33px;
+    margin: 80px 0 40px;
   }
 
   .functional__button {
