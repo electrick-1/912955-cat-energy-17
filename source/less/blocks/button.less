@@ -1,7 +1,7 @@
 .button {
   display: block;
   width: 280px;
-  min-height: 40px;
+  height: 40px;
   padding: 11px 0;
   box-sizing: border-box;
 
@@ -15,6 +15,15 @@
   text-transform: uppercase;
 
   background-color: #68b738;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {

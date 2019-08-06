@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
+  padding-top: 18px;
   box-sizing: border-box;
 
   outline: 2px solid rgba(255, 255, 0, 0.5);
@@ -21,6 +22,7 @@
 .advantages__list {
   padding: 0;
   margin: 0;
+  margin-top: 4px;
 
   list-style: none;
 }
@@ -28,11 +30,12 @@
 .advantages__item {
   position: relative;
 
-  margin: 30px 0 0 80px;
+  margin: 26px 0 0 80px;
 
   &::before {
     content: "";
     position: absolute;
+    top: -2px;
     left: -80px;
 
     display: block;
@@ -63,7 +66,7 @@
 @media (min-width: @tablet-width) {
   .advantages {
     padding: 0 30px;
-    margin-top: 20px;
+    margin-top: 15px;
 
     border-bottom: 1px solid #d9d9d9;
   }
@@ -82,7 +85,7 @@
   .advantages__item {
     width: 245px;
     min-height: 230px;
-    margin: 35px 80px 55px 0;
+    margin: 35px 78px 53px 0;
     padding-top: 118px;
     box-sizing: border-box;
 
@@ -90,7 +93,7 @@
     line-height: 24px;
 
     &::before {
-      top: 0;
+      top: 6px;
       left: 0;
 
       display: block;
@@ -100,8 +103,7 @@
 
     &::after {
       position: absolute;
-      top: -30px;
-      left: 125px;
+      top: -33px;
 
       width: 120px;
       height: 230px;
@@ -117,18 +119,22 @@
 
     &--leaf::after {
       content: "1";
+      left: 118px;
     }
 
     &--powder::after {
       content: "2";
+      left: 112px;
     }
 
     &--dining::after {
       content: "3";
+      left: 115px;
     }
 
     &--clock::after {
       content: "4";
+      left: 113px;
     }
   }
 }
@@ -136,7 +142,7 @@
 @media (min-width: @desktop-width) {
   .advantages {
     padding: 0 40px;
-    margin-top: 80px;
+    margin-top: 75px;
   }
 
   .advantages__item {
