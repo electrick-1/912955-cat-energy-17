@@ -1,14 +1,35 @@
 .functional {
+  position: relative;
   min-height: 480px;
   padding: 0 20px;
 
-  background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
+  background-image: url("../img/index-can-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: 20px 167px, 0 0;
+  background-position: 20px 167px;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/index-can-mobile@2x.png"), url("../img/index-background-mobile@2x.jpg");
-    background-size: 280px 270px, 320px 305px;
+    background-image: url("../img/index-can-mobile@2x.png");
+    background-size: 280px 270px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 305px;
+    width: 320px;
+
+    background-color: #64a93c;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-size: 320px 305px;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+
+    z-index: -1;
   }
 }
 
@@ -55,6 +76,10 @@
       background-image: url("../img/index-can-tablet@2x.jpg");
       background-size: 709px 609px;
     }
+
+    &::after {
+      content: none;
+    }
   }
 
   .functional__title {
@@ -87,6 +112,7 @@
 
 @media (min-width: @desktop-width) {
   .functional {
+    position: static;
     min-height: 555px;
 
     background-image: url("../img/index-can-desktop@1x.png");
@@ -102,12 +128,13 @@
       position: absolute;
       left: 50%;
       top: 0;
-      width: 50%;
       min-height: 696px;
+      width: 50%;
 
+      background-color: #64a93c;
       background-image: url("../img/index-background-desktop@1x.jpg");
-      background-size: cover;
-      background-position: center;
+      background-size: 720px 696px;
+      background-repeat: no-repeat;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg");
