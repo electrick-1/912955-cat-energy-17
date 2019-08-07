@@ -1,8 +1,6 @@
 .page-header {
   display: flex;
   flex-wrap: wrap;
-
-  outline: 2px solid rgba(255, 0, 0, 0.5);
 }
 
 .page-header__wrapper {
@@ -18,15 +16,12 @@
   width: 191px;
   height: 39px;
 
-  background-image: url("../img/logo-mobile.svg");
-  background-repeat: no-repeat;
-
-  &:hover,
-  &:focus {
+  &:not(&--active):hover,
+  &:not(&--active):focus {
     opacity: 0.8;
   }
 
-  &:active {
+  &:not(&--active):active {
     opacity: 0.6;
   }
 }
@@ -57,12 +52,10 @@
     border: none;
   }
 
-  .page-header__logo {
-    margin: 24px 0 0 30px;
+  .page-header__logo img {
     width: 174px;
     height: 59px;
-
-    background-image: url("../img/logo-tablet.svg");
+    margin: 12px 0 0 30px;
   }
 
   .page-header__toggle {
@@ -77,13 +70,11 @@
     min-height: 142px;
   }
 
-  .page-header__logo {
+  .page-header__logo img {
     width: 203px;
     height: 60px;
+    margin: 43px 0 0 39px;
 
-    margin: 53px 0 0 39px;
-
-    background-image: url("../img/logo-desktop.svg");
     background-size: 202px 60px;
   }
 }
