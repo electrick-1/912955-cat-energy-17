@@ -1,3 +1,18 @@
 .main-nav {
+  display: none;
   margin-left: auto;
+
+  &--no-js {
+    display: block;
+  }
+
+  &--show {
+    display: block;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: block;
+  }
 }

@@ -1,8 +1,6 @@
 .page-header {
   display: flex;
   flex-wrap: wrap;
-
-  outline: 2px solid rgba(255, 0, 0, 0.5);
 }
 
 .page-header__wrapper {
@@ -14,24 +12,22 @@
 
 .page-header__logo {
   display: block;
-  margin: 11px 0 0;
+  margin: 11px 0 15px;
   width: 191px;
   height: 39px;
 
-  background-image: url("../img/logo-mobile.svg");
-  background-repeat: no-repeat;
-
-  &:hover,
-  &:focus {
+  &:not(&--active):hover,
+  &:not(&--active):focus {
     opacity: 0.8;
   }
 
-  &:active {
+  &:not(&--active):active {
     opacity: 0.6;
   }
 }
 
 .page-header__toggle {
+  display: block;
   width: 25px;
   height: 19px;
   padding: 0;
@@ -41,6 +37,20 @@
   background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   border: none;
+
+  outline: none;
+
+  &--no-js {
+    display: none;
+  }
+
+  &--show {
+    width: 18px;
+    height: 18px;
+    margin-left: 69px;
+
+    background-image: url("../img/icon-close.svg");
+  }
 }
 
 // Планшетная версия
@@ -57,12 +67,10 @@
     border: none;
   }
 
-  .page-header__logo {
-    margin: 24px 0 0 30px;
+  .page-header__logo img {
     width: 174px;
     height: 59px;
-
-    background-image: url("../img/logo-tablet.svg");
+    margin: 12px 0 0 30px;
   }
 
   .page-header__toggle {
@@ -77,13 +85,11 @@
     min-height: 142px;
   }
 
-  .page-header__logo {
+  .page-header__logo img {
     width: 203px;
     height: 60px;
+    margin: 43px 0 0 39px;
 
-    margin: 53px 0 0 39px;
-
-    background-image: url("../img/logo-desktop.svg");
     background-size: 202px 60px;
   }
 }
