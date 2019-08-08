@@ -12,7 +12,7 @@
 
 .page-header__logo {
   display: block;
-  margin: 11px 0 0;
+  margin: 11px 0 15px;
   width: 191px;
   height: 39px;
 
@@ -27,6 +27,7 @@
 }
 
 .page-header__toggle {
+  display: block;
   width: 25px;
   height: 19px;
   padding: 0;
@@ -36,6 +37,20 @@
   background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   border: none;
+
+  outline: none;
+
+  &--no-js {
+    display: none;
+  }
+
+  &--show {
+    width: 18px;
+    height: 18px;
+    margin-left: 69px;
+
+    background-image: url("../img/icon-close.svg");
+  }
 }
 
 // Планшетная версия
