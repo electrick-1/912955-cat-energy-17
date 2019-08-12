@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <title>Кэт энерджи - Подбор программы</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header container">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
@@ -46,7 +49,7 @@
               <a href="" class="social__link social__link--vk">
                 <span class="visually-hidden">Вконтакте</span>
                 <svg width="22" height="12">
-                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  <use xlink:href="#icon-vk"></use>
                 </svg>
               </a>
             </li>
@@ -54,7 +57,7 @@
               <a href="" class="social__link social__link--ins">
                 <span class="visually-hidden">Инстаграм</span>
                 <svg width="16" height="16">
-                  <use xlink:href="img/sprite.svg#icon-inst"></use>
+                  <use xlink:href="#icon-insta"></use>
                 </svg>
               </a>
             </li>
@@ -62,7 +65,7 @@
               <a href="" class="social__link social__link--fb">
                 <span class="visually-hidden">Фэйсбук</span>
                 <svg width="10" height="19">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
             </li>
@@ -72,7 +75,7 @@
           <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
             <svg width="33" height="40">
-              <use xlink:href="img/sprite.svg#icon-copyright"></use>
+              <use xlink:href="#htmlacademy"></use>
             </svg>
             <span class="visually-hidden">Логотип HTML Academy</span>
           </a>
