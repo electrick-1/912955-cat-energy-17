@@ -254,6 +254,19 @@
       width: 100%;
       border-bottom: 1px dotted rgba(0, 0, 0, 0.23);
     }
+
+    &:hover,
+    &:focus {
+      &::after {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    &:active {
+      &::after {
+        border-bottom: none;
+      }
+    }
   }
 
   .living-example__scale {
@@ -270,15 +283,27 @@
 
   .living-example__bar {
     position: absolute;
-    top: -14px;
+    top: -12px;
     left: 200px;
     width: 34px;
     height: 34px;
 
+
     background-color: #68b738;
     border: 13px solid #ffffff;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 1px #cdcdcd, 0 2px 5px 1px rgba(0, 0, 0, 0.15);
     border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 1px #cdcdcd, 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+
+      cursor: pointer;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px #68b738, 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+    }
   }
 }
 

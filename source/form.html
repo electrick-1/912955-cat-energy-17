@@ -37,14 +37,96 @@
     </header>
 
     <main class="page-main">
-      <section class="map">
+      <section class="programm container">
+        <h1 class="programm__title">Подбор программы</h1>
+        <p class="programm__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="programm__form form" action="https://echo.htmlacademy.ru" method="post">
+          <ul class="form__personal">
+            <li class="form__personal-item">
+              <label class="form__personal-label" for="form__personal-1">Имя:*</label>
+              <input class="form__personal-input form__personal-input--1" type="text" name="name" placeholder="Барсик" id="form__personal-1" required>
+            </li>
+            <li class="form__personal-item">
+              <label class="form__personal-label" for="form__personal-2">Вес (кг):*</label>
+              <input class="form__personal-input form__personal-input--2" type="text" name="weight" placeholder="7" id="form__personal-2" required>
+            </li>
+            <li class="form__personal-item">
+              <label class="form__personal-label" for="form__personal-3">Возраст (лет):</label>
+              <input class="form__personal-input form__personal-input--3" type="text" name="years" placeholder="7" id="form__personal-3">
+            </li>
+          </ul>
+          <ul class="form__categories">
+            <li class="form__categories-item">
+              <input class="visually-hidden form__categories-input" type="radio" name="categories" id="form__radio-1" checked>
+              <label class="form__categories-label" for="form__radio-1">Похудение</label>
+            </li>
+            <li class="form__categories-item">
+              <input class="visually-hidden form__categories-input" type="radio" name="categories" id="form__radio-2">
+              <label class="form__categories-label" for="form__radio-2">Набор массы</label>
+            </li>
+            <li class="form__categories-item">
+              <input class="visually-hidden form__categories-input" type="radio" name="categories" id="form__radio-3">
+              <label class="form__categories-label" for="form__radio-3">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+          <div class="form__contacts">
+            <h2 class="form__contacts-title">Контактные данные (владельца кота)</h2>
+            <ul class="form__contacts-list">
+              <li class="form__contacts-item">
+                <label class="form__contacts-label form__contacts-label--1" for="form__contacts-1">
+                  E-mail:*
+                  <input class="form__contacts-input form__contacts-input--1" type="text" name="email" placeholder="kuklachev@gmail.com" id="form__contacts-1" required>
+                  <span class="form__contacts-icon form__contacts-icon--1"></span>
+                </label>
+              </li>
+              <li class="form__contacts-item">
+                <label class="form__contacts-label form__contacts-label--2" for="form__contacts-2">
+                  Телефон:*
+                  <input class="form__contacts-input form__contacts-input--2" type="text" name="phone" placeholder="8 (960) 900-60-90" id="form__contacts-2" required>
+                  <span class="form__contacts-icon form__contacts-icon--2"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="form__comment">
+            <h2 class="form__comment-title">Комментарий</h2>
+            <textarea class="form__comment-textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+          <div class="form__add">
+            <h2 class="form__add-title">Дополнительно</h2>
+            <ul class="form__add-list">
+              <li class="form__add-item">
+                <input class="visually-hidden form__add-input" type="checkbox" name="categories" id="form__checkbox-1" checked>
+                <label class="form__add-label" for="form__checkbox-1">Сахарозаменитель</label>
+              </li>
+              <li class="form__add-item">
+                <input class="visually-hidden form__add-input" type="checkbox" name="categories" id="form__checkbox-2">
+                <label class="form__add-label" for="form__checkbox-2">Питьевая вода</label>
+              </li>
+              <li class="form__add-item">
+                <input class="visually-hidden form__add-input" type="checkbox" name="categories" id="form__checkbox-3">
+                <label class="form__add-label" for="form__checkbox-3">Молоко</label>
+              </li>
+              <li class="form__add-item">
+                <input class="visually-hidden form__add-input" type="checkbox" name="categories" id="form__checkbox-4">
+                <label class="form__add-label" for="form__checkbox-4">Витамины</label>
+              </li>
+            </ul>
+          </div>
+          <div class="form__send">
+            <button class="form__button button" type="submit" name="submit">Отправить заявку</button>
+            <p class="form__description">* — Обязательные поля</p>
+          </div>
+        </form>
+      </section>
+      <section class="map map--catalog">
         <h2 class="visually-hidden">Карта с расположением</h2>
-        <div class="map__info container">
+        <div class="map__info map__info--catalog container">
           <p class="map__info-item map__info-item--dillers">приглашаем <br>к сотрудничеству дилеров!</p>
           <p class="map__info-item map__info-item--address">ул. Большая Конюшенная, д. 19/8<span> Санкт-Петербург</span></p>
         </div>
         <div class="map__wrapper">
-          <iframe rc="https://yandex.ru/map-widget/v1/-/CBF9nKAJWA" width="100%" height="365"></iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/-/CBF9nKAJWA" width="100%" height="365"></iframe>
         </div>
       </section>
     </main>
@@ -59,7 +141,7 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a href="" class="social__link social__link--vk">
+              <a href="https://vk.com/htmlacademy" class="social__link social__link--vk">
                 <span class="visually-hidden">Вконтакте</span>
                 <svg width="22" height="12">
                   <use xlink:href="#icon-vk"></use>
@@ -67,7 +149,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a href="" class="social__link social__link--ins">
+              <a href="https://www.instagram.com/htmlacademy/" class="social__link social__link--ins">
                 <span class="visually-hidden">Инстаграм</span>
                 <svg width="16" height="16">
                   <use xlink:href="#icon-insta"></use>
@@ -75,7 +157,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a href="" class="social__link social__link--fb">
+              <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--fb">
                 <span class="visually-hidden">Фэйсбук</span>
                 <svg width="10" height="19">
                   <use xlink:href="#icon-fb"></use>

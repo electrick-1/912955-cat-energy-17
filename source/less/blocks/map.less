@@ -16,13 +16,14 @@
   background-color: #ffffff;
 
   &--catalog {
+    padding-top: 12px;
     background-color: #f2f2f2;
   }
 }
 
 .map__info-item {
   width: 140px;
-  margin: 28px 0 16px;
+  margin: 16px 0 16px;
 
   &--dillers {
     font-family: @oswald;
@@ -62,8 +63,12 @@
   }
 
   .map__info {
-    padding: 38px 72px 28px 70px;
-    margin-bottom: 0;
+    padding: 18px 72px 28px 70px;
+    margin-bottom: 15px;
+
+    &--catalog {
+      padding-top: 46px;
+    }
   }
 
   .map__info-item {
@@ -71,6 +76,7 @@
     margin-bottom: 30px;
 
     &--dillers {
+      margin: 0;
       font-size: 20px;
       line-height: 25px;
     }
@@ -89,7 +95,7 @@
 
   .map__wrapper iframe {
     margin: 0 auto -5px;
-    height: 400px;
+    height: 395px;
 
     background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@1x.png");
     background-position: center;
