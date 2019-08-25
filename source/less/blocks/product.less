@@ -14,6 +14,14 @@
   }
 }
 
+.product__link {
+  text-decoration: none;
+
+  &--show-more {
+    text-align: center;
+  }
+}
+
 .product__title {
   width: 75px;
   margin: 22px 0 12px;
@@ -131,7 +139,6 @@
   .product__image {
     position: absolute;
     left: 0;
-
     width: 324px;
 
     &--chicken-small,
@@ -152,6 +159,7 @@
     }
 
     &--show-more {
+      position: relative;
       width: 61px;
       height: 61px;
     }
@@ -193,6 +201,10 @@
 
   .product__image {
     width: 245px;
+
+    &--show-more {
+      width: 61px;
+    }
   }
 
   .product__feature {
