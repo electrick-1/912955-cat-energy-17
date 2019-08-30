@@ -26,6 +26,8 @@
     text-decoration: none;
     text-transform: uppercase;
 
+    outline: none;
+
     &:hover,
     &:focus {
       opacity: 0.6;
@@ -49,6 +51,7 @@
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
+    flex-wrap: wrap;
     margin-right: 30px;
     margin-top: 22px;
   }

@@ -1,0 +1,380 @@
+.living-example {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 705px;
+
+    background-color: #f2f2f2;
+
+    z-index: -1;
+  }
+}
+
+.living-example__wrapper {
+  min-height: 700px;
+  padding: 0 20px;
+}
+
+.living-example__title {
+  margin: 17px 0 23px;
+
+  font-family: @oswald;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  color: #111111;
+}
+
+.living-example__description {
+  padding: 0 14px 0 0;
+  margin: 0;
+}
+
+.living-example__result {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.living-example__result-item {
+  position: relative;
+  width: 124px;
+  height: 56px;
+  padding: 13px 0 17px;
+  margin: 25px 0;
+  box-sizing: border-box;
+
+  font-family: @oswald;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #111111;
+  text-align: center;
+  text-transform: uppercase;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  &::after {
+    position: absolute;
+    bottom: -16px;
+    left: 18px;
+    width: 87px;
+    height: 25px;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    font-family: @arial;
+    font-size: 12px;
+    line-height: 12px;
+    color: #444444;
+    text-transform: lowercase;
+
+    background-color: #f2f2f2;
+  }
+
+  &--weight::after {
+    content: "снижение веса";
+  }
+
+  &--days::after {
+    content: "затрачено времени";
+  }
+}
+
+.living-example__price {
+  flex-grow: 1;
+  margin: 7px 0 0 0;
+
+  font-family: @oswald;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.living-example__range {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 195px;
+  padding: 290px 45px 0;
+
+  background-image: url("../img/before-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: -20px 33px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/before-mobile@2x.png");
+    background-size: 320px 240px;
+  }
+}
+
+.living-example__range-description {
+  font-family: @oswald;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.living-example__scale {
+  position: relative;
+  top: 18px;
+  width: 84px;
+  height: 14px;
+  padding: 3px 6px;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+.living-example__bar {
+  width: 35px;
+  height: 6px;
+  box-sizing: border-box;
+
+  background-color: #68b738;
+  border-radius: 3px;
+}
+
+@media (min-width: @tablet-width) {
+  .living-example {
+    min-height: 1080px;
+
+    &::before {
+      top: 593px;
+      width: 100%;
+      height: 457px;
+
+      background-color: #f2f2f2;
+
+      z-index: -1;
+    }
+  }
+
+  .living-example__wrapper {
+    min-height: 462px;
+    padding: 0 30px;
+  }
+
+  .living-example__title {
+    font-size: 60px;
+  }
+
+  .living-example__description {
+    margin: 63px 0 27px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .living-example__result {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .living-example__result-item {
+    width: 162px;
+    height: 72px;
+    margin-right: 42px;
+
+    font-size: 30px;
+    line-height: 37px;
+
+    &::after {
+      position: absolute;
+      bottom: -20px;
+      height: 27px;
+      padding: 0 8px;
+
+      font-size: 14px;
+      line-height: 14px;
+
+      background-color: #ffffff;
+    }
+
+    &--weight::after {
+      left: 23px;
+      width: 114px;
+    }
+
+    &--days::after {
+      left: 8px;
+      width: 143px;
+    }
+  }
+
+  .living-example__price {
+    flex-grow: 0;
+    width: 180px;
+    margin-left: auto;
+    margin-top: 35px;
+
+    font-size: 20px;
+    text-align: right;
+
+    span {
+      display: inline-block;
+      margin: 4px 0;
+    }
+  }
+
+  .living-example__range {
+    display: flex;
+    justify-content: space-between;
+    width: 570px;
+    padding: 575px 68px 0;
+    margin: 0;
+
+    background-image: url("../img/before-tablet@1x.png");
+    background-position: 15px 60px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/before-tablet@2x.png");
+      background-size: 690px 517px;
+    }
+  }
+
+  .living-example__range-description {
+    position: relative;
+    font-size: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      border-bottom: 1px dotted rgba(0, 0, 0, 0.23);
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    &:active {
+      &::after {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .living-example__scale {
+    position: relative;
+    top: 28px;
+    width: 428px;
+    height: 6px;
+    padding: 0;
+
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .living-example__bar {
+    position: absolute;
+    top: -12px;
+    left: 200px;
+    width: 34px;
+    height: 34px;
+
+
+    background-color: #68b738;
+    border: 13px solid #ffffff;
+    box-shadow: 0 0 0 1px #cdcdcd, 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 1px #cdcdcd, 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+
+      cursor: pointer;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px #68b738, 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .living-example {
+    min-height: 630px;
+
+    &::before {
+      top: 167px;
+      width: 100%;
+      height: 462px;
+
+      background-color: #f2f2f2;
+
+      z-index: -1;
+    }
+  }
+
+  .living-example__wrapper {
+    position: relative;
+    padding: 0 40px;
+  }
+
+  .living-example__title {
+    margin: 31px 0 146px;
+  }
+
+  .living-example__description {
+    width: 435px;
+    padding: 0;
+    margin: 0 0 44px 0;
+  }
+
+  .living-example__result {
+    display: flex;
+    justify-content: space-between;
+    width: 408px;
+  }
+
+  .living-example__result-item {
+    margin: 25px 42px 29px 0;
+
+    &::after {
+      bottom: -18px;
+
+      background-color: #f2f2f2;
+    }
+  }
+
+  .living-example__price {
+    display: flex;
+    justify-content: space-between;
+    width: 327px;
+    margin-left: 0;
+    margin-top: 28px;
+
+    text-align: center;
+  }
+
+  .living-example__range {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    width: 570px;
+    padding: 583px 41px 0;
+
+    background-image: url("../img/before-desktop@1x.png");
+    background-position: -40px 45px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/before-desktop@2x.png");
+    }
+  }
+}
