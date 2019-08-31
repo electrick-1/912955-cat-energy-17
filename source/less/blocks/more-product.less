@@ -1,17 +1,22 @@
-.dop-product {
+.more-product {
   padding: 0 20px;
 }
 
-.dop-product__item {
+.more-product__item {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   border-bottom: 1px solid #cdcdcd;
+
+  &:first-of-type {
+    border-top: 1px solid #cdcdcd;
+  }
 }
 
-.dop-product__title {
+.more-product__title {
   position: relative;
+  width: 247px;
   margin: 0;
   padding: 28px 0 33px;
 
@@ -21,21 +26,23 @@
   font-weight: 400;
   color: #111111;
 
-  border-bottom: 1px solid #cdcdcd;
+  background-color: #ffffff;
 
   &::after {
     content: "";
     position: absolute;
     top: 42px;
-    right: -20px;
-    width: 53px;
+    left: 0;
     height: 3px;
+    width: 100vw;
 
     background-color: #68b738;
+
+    z-index: -1;
   }
 }
 
-.dop-product__item-title {
+.more-product__item-title {
   margin: 0;
   padding: 15px 0 12px;
 
@@ -47,7 +54,7 @@
   text-transform: uppercase;
 }
 
-.dop-product__item-description {
+.more-product__item-description {
   display: flex;
   justify-content: space-between;
   width: 280px;
@@ -67,14 +74,14 @@
   }
 }
 
-.dop-product__item-button {
+.more-product__item-button {
   margin: 14px 0 17px;
 
   font-size: 16px;
   line-height: 20px;
 }
 
-.dop-product__prize {
+.more-product__prize {
   min-height: 289px;
   margin: 39px 0 36px;
 
@@ -88,7 +95,7 @@
   }
 }
 
-.dop-product__prize-description {
+.more-product__prize-description {
   display: inline-block;
   width: 162px;
   margin: 58px 0 0 57px;
@@ -99,24 +106,25 @@
   color: #ffffff;
 }
 
-.dop-product__prize-icon {
+.more-product__prize-icon {
   margin: 65px 0 0 113px;
 
   fill: #ffffff;
 }
 
 @media (min-width: @tablet-width) {
-  .dop-product {
+  .more-product {
     padding: 0 30px;
   }
 
-  .dop-product__item {
+  .more-product__item {
     align-items: center;
     border: 1px solid #cdcdcd;
     border-top: none;
   }
 
-  .dop-product__title {
+  .more-product__title {
+    width: 340px;
     padding: 68px 37px 78px;
 
     font-size: 36px;
@@ -125,29 +133,29 @@
     &::before {
       content: "";
       position: absolute;
-      top: 88px;
-      left: -30px;
-      width: 30px;
+      width: 100vw;
       height: 3px;
 
-      background-color: #68b738;
+      background-color: #64b738;
+      top: 88px;
+      right: 0;
+
+      z-index: -1;
     }
 
     &::after {
       top: 88px;
-      right: -30px;
-      width: 327px;
     }
   }
 
-  .dop-product__item-title {
+  .more-product__item-title {
     padding: 28px 40px 24px;
 
     font-size: 20px;
     line-height: 20px;
   }
 
-  .dop-product__item-description {
+  .more-product__item-description {
     justify-content: flex-end;
     margin-left: auto;
     margin-right: 38px;
@@ -166,12 +174,12 @@
     }
   }
 
-  .dop-product__item-button {
+  .more-product__item-button {
     width: 633px;
     margin: 0 37px 26px;
   }
 
-  .dop-product__prize {
+  .more-product__prize {
     min-height: 200px;
     margin: 69px 0 76px;
 
@@ -183,25 +191,25 @@
     }
   }
 
-  .dop-product__prize-description {
+  .more-product__prize-description {
     margin: 75px 0 0 274px;
 
     text-align: left;
   }
 
-  .dop-product__prize-icon {
+  .more-product__prize-icon {
     margin: 65px 0 0 90px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .dop-product {
-    position: relative;
+  .more-product {
+    display: flex;
     padding: 0 40px;
     margin-bottom: 86px;
   }
 
-  .dop-product__item {
+  .more-product__item {
     width: 895px;
     align-items: center;
 
@@ -209,33 +217,25 @@
     border-bottom: 1px solid #cdcdcd;
   }
 
-  .dop-product__title {
-    width: 895px;
+  .more-product__title {
+    width: 370px;
     padding: 73px 0 80px;
 
     &::before {
-      content: "";
-      position: absolute;
+      right: 410px;
       top: 95px;
-      left: -110px;
-      width: 70px;
-      height: 3px;
-
-      background-color: #68b738;
     }
 
     &::after {
       top: 95px;
-      right: -435px;
-      width: 957px;
     }
   }
 
-  .dop-product__item-title {
+  .more-product__item-title {
     padding: 26px 0 25px;
   }
 
-  .dop-product__item-description {
+  .more-product__item-description {
     width: 294px;
     justify-content: space-between;
     margin-left: auto;
@@ -256,19 +256,16 @@
     }
   }
 
-  .dop-product__item-button {
+  .more-product__item-button {
     width: 245px;
     padding: 10px 0 16px;
     margin: 0 0;
   }
 
-  .dop-product__prize {
-    position: absolute;
-    top: 191px;
-    right: 40px;
+  .more-product__prize {
     width: 245px;
     min-height: 289px;
-    margin: 0;
+    margin: 190px 0 0 80px;
 
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-repeat: no-repeat;
@@ -279,7 +276,7 @@
     }
   }
 
-  .dop-product__prize-description {
+  .more-product__prize-description {
     width: 162px;
     margin: 55px 0 0 40px;
 
@@ -288,7 +285,7 @@
     text-align: center;
   }
 
-  .dop-product__prize-icon {
+  .more-product__prize-icon {
     margin: 64px 0 0 95px;
   }
 }
